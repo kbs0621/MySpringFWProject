@@ -31,7 +31,7 @@ public class Hello {
 	}
 
 	public void setPrinter(Printer printer) {
-		System.out.println(this.getClass().getName() + "setPrinter() 호출됨" + printer.getClass().getName());
+		System.out.println(this.getClass().getName() + " setPrinter() 호출됨" + printer.getClass().getName());
 		this.printer = printer;
 	}
 
