@@ -5,5 +5,18 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-
+	<!-- id는 class 이름과 똑같이 하고  앞글자는 소문자로 등록-->
+	
+	<!-- StringPrinter class를 Bean으로 등록 -->
+	<bean id="strPrinter" class="myspring.di.xml.StringPrinter"/> 
+	
+	<!-- ConsolePrinter class를 Bean으로 등록 -->
+	<bean id="consolePrinter" class="myspring.di.xml.ConsolePrinter"/>
+	
+	<!-- Hello class를 Bean으로 등록 -->
+	<bean id="hello" class="myspring.di.xml.Hello">
+		<property name="name" value="스프링" />
+		<property name="printer" ref="strPrinter"/>
+		
+	</bean>	
 </beans>
