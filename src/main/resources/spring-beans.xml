@@ -15,6 +15,7 @@
 	
 	<!-- Hello class를 Bean으로 등록 -->
 	<bean id="hello" class="myspring.di.xml.Hello" scope="singleton">
+		<!-- setter injection -->
 		<property name="name" value="스프링" />
 		<property name="printer" ref="strPrinter"/>
 		
